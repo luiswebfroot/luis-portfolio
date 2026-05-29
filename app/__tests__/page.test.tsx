@@ -24,9 +24,8 @@ describe('Portfolio page', () => {
     })
   })
 
-  it('has a get in touch link pointing to the correct email', () => {
+  it('has a get in touch button', () => {
     render(<Page />)
-    const link = screen.getByRole('link', { name: /get in touch/i })
-    expect(link).toHaveAttribute('href', 'mailto:webfroot@hotmail.com')
+    expect(screen.getByRole('button', { name: /get in touch/i })).toBeInTheDocument()
   })
 })

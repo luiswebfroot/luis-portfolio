@@ -39,12 +39,12 @@ export default function Page() {
           ))}
         </ul>
 
-        <a
-          href="mailto:webfroot@hotmail.com"
-          className="inline-flex items-center gap-2 bg-white text-[#764ba2] text-sm font-bold px-7 py-3 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-150"
+        <button
+          onClick={() => (window as { tidioChatApi?: { open: () => void } }).tidioChatApi?.open()}
+          className="inline-flex items-center gap-2 bg-white text-[#764ba2] text-sm font-bold px-7 py-3 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-150 cursor-pointer"
         >
-          ✉ Get in touch
-        </a>
+          💬 Get in touch
+        </button>
 
       </div>
     </main>
