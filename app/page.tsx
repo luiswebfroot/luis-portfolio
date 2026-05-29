@@ -3,11 +3,10 @@
 import { useState } from 'react'
 
 const SKILLS = [
-  'React', 'Next.js', 'TypeScript', 'Tailwind CSS',
+  'React', 'Next.js', 'TypeScript',
   'Node.js', 'Python', 'FastAPI', 'Express',
-  'PostgreSQL', 'MongoDB', 'Redis', 'MySQL',
-  'AWS', 'Docker', 'Git', 'Linux',
-  'GraphQL', 'REST APIs',
+  'PostgreSQL', 'MySQL',
+  'AWS', 'Docker', 'Git', 'REST APIs',
 ]
 const FORMSPREE_URL = 'https://formspree.io/f/maqkvaap'
 
