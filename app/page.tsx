@@ -113,8 +113,9 @@ export default function Page() {
           About
         </p>
         <p className="text-[15px] text-white/85 leading-relaxed mb-7">
-          I build robust web applications and APIs. Passionate about clean code,
-          great developer experience, and shipping things that actually work.
+          I've been building web apps and APIs for a few years now — taking ideas from nothing to something real.
+          Whether it's a full-stack app, a backend service, or an iOS project, I care about the details:
+          clean code, happy users, and software that's easy to maintain.
         </p>
 
         <p className="text-[10px] font-semibold text-white/50 uppercase tracking-[0.15em] mb-3">
