@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
 
   if (username === validUser && password === validPass) {
     const token = await createSessionToken(validPass, sessionMinutes)
-    const res = NextResponse.redirect(new URL('/downloads', req.url))
+    const res = NextResponse.redirect(new URL('/downloads', req.url), { status: 303 })
     res.cookies.set('downloads_session', token, {
       httpOnly: true,
       secure: true,
@@ -42,5 +42,5 @@ export async function POST(req: NextRequest) {
     return res
   }
 
-  return NextResponse.redirect(new URL('/downloads/login?error=1', req.url))
+  return NextResponse.redirect(new URL('/downloads/login?error=1', req.url), { status: 303 })
 }
