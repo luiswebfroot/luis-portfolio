@@ -77,7 +77,7 @@ export default function Page() {
   }
 
   return (
-    <main className="min-h-screen bg-[linear-gradient(135deg,#667eea_0%,#764ba2_100%)] flex items-center justify-center p-6 overflow-hidden">
+    <main className="min-h-screen bg-[linear-gradient(135deg,#667eea_0%,#764ba2_100%)] flex items-center justify-center p-4 md:p-8 overflow-hidden">
       {/* Rising particles */}
       <div className="fixed inset-0 pointer-events-none">
         {PARTICLES.map((p, i) => (
@@ -95,9 +95,9 @@ export default function Page() {
           />
         ))}
       </div>
-      <div className="bg-white/[0.13] backdrop-blur-xl border border-white/25 rounded-3xl p-12 w-full max-w-lg shadow-2xl">
+      <div className="bg-white/[0.13] backdrop-blur-xl border border-white/25 rounded-3xl p-8 md:p-14 w-full max-w-2xl shadow-2xl">
 
-        <h1 className="text-5xl font-extrabold text-white tracking-tight leading-none mb-1">
+        <h1 className="text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-none mb-1">
           Luis Fu
         </h1>
         <p className="text-sm font-medium text-white/70 uppercase tracking-[0.2em] mb-1">
