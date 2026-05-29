@@ -1,10 +1,14 @@
 @import "tailwindcss";
 
 @keyframes rise {
-  0%   { transform: translateY(0) translateX(0); opacity: 0; }
-  10%  { opacity: 1; }
-  90%  { opacity: 0.7; }
-  100% { transform: translateY(-100vh) translateX(var(--dx)); opacity: 0; }
+  0%   { transform: translateY(0)      translateX(0)    scale(1);    opacity: 0; }
+  10%  { transform: translateY(-10vh)  translateX(10px) scale(1.3);  opacity: 1; }
+  25%  { transform: translateY(-25vh)  translateX(-8px) scale(0.8);  opacity: 1; }
+  40%  { transform: translateY(-40vh)  translateX(12px) scale(1.25); opacity: 1; }
+  55%  { transform: translateY(-55vh)  translateX(-6px) scale(0.85); opacity: 0.9; }
+  70%  { transform: translateY(-70vh)  translateX(9px)  scale(1.2);  opacity: 0.7; }
+  85%  { transform: translateY(-85vh)  translateX(-5px) scale(0.9);  opacity: 0.4; }
+  100% { transform: translateY(-100vh) translateX(var(--dx)) scale(1); opacity: 0; }
 }
 
 .particle {
