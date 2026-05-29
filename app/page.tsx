@@ -2,7 +2,13 @@
 
 import { useState } from 'react'
 
-const SKILLS = ['React', 'Node.js', 'Python', 'PostgreSQL', 'AWS']
+const SKILLS = [
+  'React', 'Next.js', 'TypeScript', 'Tailwind CSS',
+  'Node.js', 'Python', 'FastAPI', 'Express',
+  'PostgreSQL', 'MongoDB', 'Redis', 'MySQL',
+  'AWS', 'Docker', 'Git', 'Linux',
+  'GraphQL', 'REST APIs',
+]
 const FORMSPREE_URL = 'https://formspree.io/f/maqkvaap'
 
 const PARTICLES = [

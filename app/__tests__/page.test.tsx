@@ -17,9 +17,9 @@ describe('Portfolio page', () => {
     expect(screen.getByText(/auckland, new zealand/i)).toBeInTheDocument()
   })
 
-  it('displays all five skills', () => {
+  it('displays skills', () => {
     render(<Page />)
-    ;['React', 'Node.js', 'Python', 'PostgreSQL', 'AWS'].forEach((skill) => {
+    ;['React', 'Next.js', 'TypeScript', 'Node.js', 'Python', 'PostgreSQL', 'AWS', 'Docker'].forEach((skill) => {
       expect(screen.getByText(skill)).toBeInTheDocument()
     })
   })
