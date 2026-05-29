@@ -7,6 +7,7 @@ const SKILLS = [
   'Node.js', 'Python', 'FastAPI', 'Express',
   'PostgreSQL', 'MySQL',
   'AWS', 'Docker', 'Git', 'REST APIs',
+  'Swift', 'SwiftUI',
 ]
 const FORMSPREE_URL = 'https://formspree.io/f/maqkvaap'
 
