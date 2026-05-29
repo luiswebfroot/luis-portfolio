@@ -5,6 +5,25 @@ import { useState } from 'react'
 const SKILLS = ['React', 'Node.js', 'Python', 'PostgreSQL', 'AWS']
 const FORMSPREE_URL = 'https://formspree.io/f/maqkvaap'
 
+const PARTICLES = [
+  { left: '5%',  size: 3, duration: 6,   delay: 0,   dx: '8px'  },
+  { left: '12%', size: 2, duration: 8,   delay: 1.5, dx: '-6px' },
+  { left: '20%', size: 4, duration: 7,   delay: 0.5, dx: '12px' },
+  { left: '28%', size: 2, duration: 9,   delay: 3,   dx: '-10px'},
+  { left: '36%', size: 5, duration: 6.5, delay: 1,   dx: '6px'  },
+  { left: '44%', size: 3, duration: 8.5, delay: 2,   dx: '-8px' },
+  { left: '52%', size: 2, duration: 7.5, delay: 0.8, dx: '10px' },
+  { left: '60%', size: 4, duration: 6,   delay: 2.5, dx: '-5px' },
+  { left: '68%', size: 3, duration: 9,   delay: 0.3, dx: '8px'  },
+  { left: '75%', size: 2, duration: 7,   delay: 1.8, dx: '-12px'},
+  { left: '82%', size: 4, duration: 8,   delay: 0.7, dx: '6px'  },
+  { left: '90%', size: 3, duration: 6.5, delay: 1.2, dx: '-8px' },
+  { left: '95%', size: 2, duration: 7.5, delay: 3.5, dx: '10px' },
+  { left: '15%', size: 5, duration: 9.5, delay: 4,   dx: '-6px' },
+  { left: '55%', size: 2, duration: 5.5, delay: 2.2, dx: '14px' },
+  { left: '40%', size: 3, duration: 8,   delay: 3.8, dx: '-9px' },
+]
+
 type FormState = 'idle' | 'sending' | 'sent' | 'error'
 
 export default function Page() {
@@ -33,7 +52,24 @@ export default function Page() {
   }
 
   return (
-    <main className="min-h-screen bg-[linear-gradient(135deg,#667eea_0%,#764ba2_100%)] flex items-center justify-center p-6">
+    <main className="min-h-screen bg-[linear-gradient(135deg,#667eea_0%,#764ba2_100%)] flex items-center justify-center p-6 overflow-hidden">
+      {/* Rising particles */}
+      <div className="fixed inset-0 pointer-events-none">
+        {PARTICLES.map((p, i) => (
+          <div
+            key={i}
+            className="particle"
+            style={{
+              left: p.left,
+              width: p.size,
+              height: p.size,
+              animationDuration: `${p.duration}s`,
+              animationDelay: `${p.delay}s`,
+              '--dx': p.dx,
+            } as React.CSSProperties}
+          />
+        ))}
+      </div>
       <div className="bg-white/[0.13] backdrop-blur-xl border border-white/25 rounded-3xl p-12 w-full max-w-lg shadow-2xl">
 
         <h1 className="text-5xl font-extrabold text-white tracking-tight leading-none mb-1">
