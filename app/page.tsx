@@ -1,3 +1,5 @@
+'use client'
+
 const SKILLS = ['React', 'Node.js', 'Python', 'PostgreSQL', 'AWS']
 
 export default function Page() {
